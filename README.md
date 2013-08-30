@@ -9,7 +9,7 @@ This Script will give you the number of day beween two dates.
 
 ==================
 
-This script using jquery datepicker and Bootstrap 3.0
+This script is using jquery datepicker.
 
 
 ==================
