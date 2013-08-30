@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Days between Dates</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/ui-darkness/jquery-ui.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.ui-datepicker {
+font-size:12px;
+}
+#result {
+font-size:20px;
+color:red;
+}
+</style>
+<script>
+    $(function() {
+    $( "#from" ).datepicker();
+    });
+    $(function() {
+    $("#to").datepicker();
+    $( "#to" ).datepicker('setDate', new Date());
+    });
+</script>
+</head>
+<body>
+<center>
+<div class="container-fluid">
+<h2>How many days between dates ?</h2>
+<br>
+    <form class="formwhite">
+    <table><tr><td>Start date:</td><td><input type="text" id="from" onKeyUp="calculate();" />&nbsp;
+    </td></tr>
+    <tr><td>End Date:</td><td><input type="text" id="to" onKeyUp="calculate();" /></td></tr>
+    </table>
+    </form>
+    <button class="btn btn-inverse" type="button" onclick="calculate()" />Calculate Dates</button><br><br>
+<table>
+<tr>
+<td>
+<span id="result"></span>
+</td>
+</tr>
+</table>
+<script>
+</script>
+<script>
+    var calculate = function() {
+    var oneDay = 24 * 60 * 60 * 1000;
+    var firstDate = new Date(document.getElementById("from").value);
+    var secondDate = new Date(document.getElementById("to").value);
+    var diffDays = (secondDate- firstDate)/oneDay;
+    document.getElementById("result").innerHTML= diffDays + " days ";}
+</script>
+<br><br>
+</center>
+</div>
+</body>
+</html>
