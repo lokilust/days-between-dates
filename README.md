@@ -1,7 +1,7 @@
 days-between-dates
 ==================
 
-How many days between dates script.
+How many days between dates.
 
 ==================
 
